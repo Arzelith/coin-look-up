@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material';
-import logo from '../assets/images/cryptologo.png';
 
 const Hero = () => {
   return (
@@ -13,8 +12,7 @@ const Hero = () => {
       pb={3}
       textAlign={'center'}
     >
-      <img src={logo} style={{ width: 120 }} />
-      <Typography variant='h2' fontWeight={''}>
+      <Typography variant='h2' fontWeight={'Bold'}>
         Coin look up!
       </Typography>
       <Typography variant='h5' fontWeight={''}>
