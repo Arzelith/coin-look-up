@@ -16,7 +16,7 @@ const Hero = () => {
         Coin look up!
       </Typography>
       <Typography variant='h5' fontWeight={''}>
-        Obtén información de mercado de tus cryptomonedas favoritas.
+        Obtén información de mercado de tus criptomonedas favoritas.
       </Typography>
     </Box>
   );

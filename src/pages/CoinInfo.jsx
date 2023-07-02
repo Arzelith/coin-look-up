@@ -47,7 +47,7 @@ const CoinInfo = () => {
         setUserInput={setUserInput}
       />
       <Button variant='contained' onClick={() => navigate('/')} sx={{ mt: 3, mb: 3 }}>
-        Buscar otra crypto moneda
+        Buscar otra cripto moneda
       </Button>
       <CoinDetails
         loadingSingle={loadingSingle}
