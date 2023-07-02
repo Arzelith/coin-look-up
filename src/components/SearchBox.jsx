@@ -10,7 +10,7 @@ const SearchBox = ({ handleChange }) => {
       fullWidth
       id='coinSearch'
       name='coinSearch'
-      label='Buscar'
+      label='Buscar...'
       type='text'
       variant='outlined'
       margin='normal'
