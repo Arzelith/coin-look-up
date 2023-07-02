@@ -11,7 +11,7 @@ const useApiRequest = ({ initialState }) => {
   const [apiError, setApiError] = useState(null);
 
   const handleChange = (e) => {
-    const noSpecialChars = e.target.value.replace(/([^\w ]|_)/g, '');
+    const noSpecialChars = e.target.value.replace(/[&/\\#,+()$~%.'":?<>{}]/g, '');
     setUserInput({ ...userInput, [e.target.name]: noSpecialChars });
   };
 
