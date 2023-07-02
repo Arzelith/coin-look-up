@@ -11,7 +11,8 @@ const useApiRequest = ({ initialState }) => {
   const [apiError, setApiError] = useState(null);
 
   const handleChange = (e) => {
-    setUserInput({ ...userInput, [e.target.name]: e.target.value });
+    const noSpecialChars = e.target.value.replace(/([^\w ]|_)/g, '');
+    setUserInput({ ...userInput, [e.target.name]: noSpecialChars });
   };
 
   const submitListRequest = async (url) => {
