@@ -8,7 +8,7 @@ const useApiRequest = ({ initialState }) => {
   const [loadingSingle, setLoadingSingle] = useState(true);
   const [listResponseData, setListResponseData] = useState([]);
   const [uniqueResponse, setUniqueResponse] = useState({});
-  const [apiError, setApiError] = useState({});
+  const [apiError, setApiError] = useState(null);
 
   const handleChange = (e) => {
     setUserInput({ ...userInput, [e.target.name]: e.target.value });
