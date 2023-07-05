@@ -1,6 +1,6 @@
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import styled from '@emotion/styled';
-import logo from '../assets/images/cryptologov2.png';
 
 const Hero = () => {
   const Img = styled('img')({
@@ -17,7 +17,10 @@ const Hero = () => {
       pb={3}
       textAlign={'center'}
     >
-      <Img src={logo} alt='logo' />
+      <Img
+        src='https://res.cloudinary.com/davzt8amc/image/upload/v1688581355/Assets/coin-look-up/jmqgtxy4uoupg5en9mtt.webp'
+        alt='logo'
+      />
       <Typography variant='h2' fontWeight={'Bold'}>
         Coin look up!
       </Typography>
@@ -28,4 +31,5 @@ const Hero = () => {
   );
 };
 
+export const MemoizedHero = React.memo(Hero);
 export default Hero;
