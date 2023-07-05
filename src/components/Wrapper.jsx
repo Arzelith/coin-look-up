@@ -1,7 +1,12 @@
+import { useEffect } from 'react';
 import { Box, Paper, Container } from '@mui/material';
 import DisplayError from './DisplayError';
 
 const Wrapper = ({ children, isPageWrapper, apiError }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (isPageWrapper && !apiError) {
     return (
       <Container
@@ -13,7 +18,7 @@ const Wrapper = ({ children, isPageWrapper, apiError }) => {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          minHeight:'100svh'
+          minHeight: '100svh',
         }}
       >
         {children}
