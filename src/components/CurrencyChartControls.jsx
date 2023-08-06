@@ -11,11 +11,11 @@ import {
 } from '@mui/material';
 
 const tb = [
-  { days: '1', interval: '', name: '1D' },
-  { days: '7', interval: 'hourly', name: '7D' },
+  { days: '1', interval: 'daily', name: '1D' },
+  { days: '7', interval: 'daily', name: '7D' },
   { days: '30', interval: 'daily', name: '1M' },
-  { days: '365', interval: 'monthly', name: '1A' },
-  { days: 'max', interval: 'yearly', name: 'TODO' },
+  { days: '365', interval: 'daily', name: '1A' },
+  { days: 'max', interval: 'daily', name: 'TODO' },
 ];
 
 const CurrencyChartControls = ({ userInput, setUserInput, image, coinName }) => {

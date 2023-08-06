@@ -9,7 +9,7 @@ import { Button } from '@mui/material';
 const initialState = {
   currency: 'USD',
   days: '1',
-  interval: 'hourly',
+  interval: 'daily',
   precision: '6',
 };
 

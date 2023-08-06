@@ -5,7 +5,6 @@ import {
   Area,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
@@ -32,8 +31,8 @@ const CurrencyChart = ({
     );
   }, [userInput]);
 
-  const mapChartData = () => {
-    const data = listResponseData.map((item) => {
+  const mapChartData = async () => {
+    const data = await listResponseData.map((item) => {
       const [time, value] = item;
       let dt;
       if (userInput.days === '1') {
@@ -81,17 +80,23 @@ const CurrencyChart = ({
             margin={{
               top: 5,
               right: 0,
-              left: 35,
+              left: 50,
               bottom: 0,
             }}
           >
-            <CartesianGrid strokeDasharray='3 3' />
-            <XAxis dataKey='Date' interval={'preserveEnd'} dy={5} />
+            <XAxis
+              dataKey='Date'
+              interval={'preserveEnd'}
+              dy={5}
+              tickLine={false}
+              tickCount={1}
+            />
             <YAxis
               domain={[
                 Math.min(...chartData.map((item) => item[userInput.currency])),
-                Math.max(...chartData.map((item) => item[userInput.currency])),
+                'auto',
               ]}
+              tickLine={false}
             />
             <Tooltip contentStyle={{ backgroundColor: '#111827' }} />
             <Area

@@ -2,7 +2,7 @@ export const handleApiError = (error) => {
   let apiError;
   if (error.response) {
     apiError = {
-      errorMessage: error?.response?.data?.error.toUpperCase() || '',
+      errorMessage: error?.response?.data?.error?.toUpperCase() || '',
       code: error.response.status,
     };
   } else if (error.request) {
