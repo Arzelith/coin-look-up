@@ -80,7 +80,7 @@ const CurrencyChart = ({
             margin={{
               top: 5,
               right: 0,
-              left: 50,
+              left: 10,
               bottom: 0,
             }}
           >
