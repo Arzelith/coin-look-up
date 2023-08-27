@@ -25,8 +25,8 @@ const CoinList = ({ listResponseData, title, loading }) => {
         <Loader height={400} />
       ) : (
         <Fade in={!loading}>
-          <Paper sx={{ height: 400, overflow: 'auto' }} variant='outlined'>
-            <List sx={{ pl: 3, pr: 3, pt: 0, pb: 0 }}>
+          <Paper sx={{ height: 473, overflow: 'auto' }} variant='outlined'>
+            <List sx={{ pl: 3, pr: 3, pt: 1, pb: 1 }}>
               {listResponseData.length === 0 ? (
                 <Box height={398} display={'flex'} alignItems={'center'}>
                   <Typography variant='h6' mr={'auto'} ml={'auto'} fontWeight={'bold'}>

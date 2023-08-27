@@ -7,8 +7,8 @@ import Wrapper from '../components/Wrapper';
 import { Button } from '@mui/material';
 
 const initialState = {
-  currency: 'USD',
-  days: '1',
+  currency: 'CLP',
+  days: 'max',
   interval: 'daily',
   precision: '6',
 };
