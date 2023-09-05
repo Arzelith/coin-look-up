@@ -7,12 +7,12 @@ export const handleApiError = (error) => {
     };
   } else if (error.request) {
     apiError = {
-      errorMessage: 'NO SE PUEDE PROCESAR LA SOLICITUD',
+      errorMessage: 'No se puede procesar la solicitud en este momento',
       code: 'ERROR',
     };
   } else {
     apiError = {
-      errorMessage: 'HA OCURRIDO UN ERROR INESPERADO',
+      errorMessage: 'Ha ocurrido un error inesperado',
       code: 'OOPS!',
     };
   }
