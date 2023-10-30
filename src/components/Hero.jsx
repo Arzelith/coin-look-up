@@ -13,18 +13,18 @@ const Hero = () => {
       justifyContent={'center'}
       alignItems={'center'}
       flexDirection={'column'}
-      pt={3}
-      pb={3}
+      pt={1}
+      pb={2}
       textAlign={'center'}
     >
       <Img
         src='https://res.cloudinary.com/davzt8amc/image/upload/v1688581355/Assets/coin-look-up/jmqgtxy4uoupg5en9mtt.webp'
         alt='logo'
       />
-      <Typography variant='h2' fontWeight={'Bold'}>
+      <Typography variant='h4' fontWeight={'Bold'}>
         Coin look up!
       </Typography>
-      <Typography variant='h5' fontWeight={''}>
+      <Typography variant='h6' fontWeight={'400'}>
         Obtén información de mercado de tus criptomonedas favoritas.
       </Typography>
     </Box>

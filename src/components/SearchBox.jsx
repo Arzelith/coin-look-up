@@ -16,7 +16,7 @@ const SearchBox = ({ handleChange }) => {
       margin='normal'
       autoComplete='off'
       onChange={debounceChange}
-      sx={{ maxWidth: '600px', mt: 0, mb: 3 }}
+      sx={{ maxWidth: '600px', mt: 0, mb: 2 }}
     />
   );
 };

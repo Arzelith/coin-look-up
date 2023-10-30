@@ -22,7 +22,7 @@ const CoinList = ({ listResponseData, title, loading }) => {
       </Typography>
 
       {loading ? (
-        <Loader height={400} />
+        <Loader height={416} />
       ) : (
         <Fade in={!loading}>
           <Paper sx={{ height: 416, overflow: 'auto' }} variant='outlined'>
