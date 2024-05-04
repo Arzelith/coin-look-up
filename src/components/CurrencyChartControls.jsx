@@ -15,7 +15,6 @@ const tb = [
   { days: '7', interval: 'daily', name: '7D' },
   { days: '30', interval: 'daily', name: '1M' },
   { days: '365', interval: 'daily', name: '1A' },
-  { days: 'max', interval: 'daily', name: 'max' },
 ];
 
 const CurrencyChartControls = ({ userInput, setUserInput, image, coinName }) => {

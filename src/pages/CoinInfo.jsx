@@ -8,7 +8,7 @@ import { Button } from '@mui/material';
 
 const initialState = {
   currency: 'CLP',
-  days: 'max',
+  days: '365',
   interval: 'daily',
   precision: '6',
 };
