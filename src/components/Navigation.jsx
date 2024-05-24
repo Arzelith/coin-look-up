@@ -12,7 +12,7 @@ const Navigation = () => {
           color={'inherit'}
           sx={{ textDecoration: 'none' }}
         >
-          <Typography component={'h1'} fontSize={30} fontWeight={'bold'} align='center'>
+          <Typography component={'h1'} fontSize={28} fontWeight={'bold'} align='center'>
             Coin look up!
           </Typography>
         </Box>

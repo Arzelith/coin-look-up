@@ -35,14 +35,7 @@ const CurrencyChart = ({
     const data = await listResponseData.map((item) => {
       const [time, value] = item;
       let dt;
-      if (userInput.days === '1') {
-        dt = new Date(time).toLocaleTimeString([], {
-          hour: '2-digit',
-          minute: '2-digit',
-        });
-      } else {
-        dt = new Date(time).toLocaleDateString('en-us');
-      }
+      dt = new Date(time).toLocaleDateString('es-cl');
       return {
         Date: dt,
         [userInput.currency]: value,
@@ -72,38 +65,54 @@ const CurrencyChart = ({
       />
 
       {(loading && chartData.length === 0) || currencyChange ? (
-        <Loader height={250} isBox={true} />
+        <Loader height={400} isBox={true} />
       ) : (
-        <ResponsiveContainer width='95%' height={250}>
+        <ResponsiveContainer width={'100%'} height={400}>
           <AreaChart
             data={chartData}
             margin={{
-              top: 5,
-              right: 0,
-              left: 10,
-              bottom: 0,
+              top: 20,
+              right: 20,
+              bottom: 50,
+              left: 20,
             }}
           >
+            <defs>
+              <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
+                <stop offset='5%' stopColor='#ffffff' stopOpacity={1} />
+                <stop offset='95%' stopColor='#04ffe6' stopOpacity={0.5} />
+              </linearGradient>
+            </defs>
             <XAxis
               dataKey='Date'
-              interval={'preserveEnd'}
+              interval={'equidistantPreserveStart'}
               dy={5}
-              tickLine={false}
+              tickLine={true}
               tickCount={1}
+              angle={-45}
+              textAnchor='end'
+              fontSize={'0.8rem'}
+              stroke='#bac3cc'
+              fontWeight={'bold'}
             />
             <YAxis
               domain={[
                 Math.min(...chartData.map((item) => item[userInput.currency])),
                 'auto',
               ]}
-              tickLine={false}
+              dx={-5}
+              tickLine={true}
+              fontSize={'0.8rem'}
+              stroke='#bac3cc'
+              fontWeight={'bold'}
             />
+
             <Tooltip contentStyle={{ backgroundColor: '#111827' }} />
             <Area
-              type='monotone'
+              // type='monotone'
               dataKey={userInput.currency}
-              stroke='#8884d8'
-              fill='#8884d8'
+              stroke='#04ffe6'
+              fill='url(#colorUv)'
             />
           </AreaChart>
         </ResponsiveContainer>

@@ -7,7 +7,7 @@ export const handleApiError = (error) => {
     };
   } else if (error.request) {
     apiError = {
-      errorMessage: 'No se puede procesar la solicitud en este momento',
+      errorMessage: 'No se puede procesar la solicitud',
       code: 'ERROR',
     };
   } else {

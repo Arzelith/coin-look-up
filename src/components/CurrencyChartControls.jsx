@@ -11,7 +11,6 @@ import {
 } from '@mui/material';
 
 const tb = [
-  { days: '1', interval: 'daily', name: '1D' },
   { days: '7', interval: 'daily', name: '7D' },
   { days: '30', interval: 'daily', name: '1M' },
   { days: '365', interval: 'daily', name: '1A' },
@@ -50,7 +49,7 @@ const CurrencyChartControls = ({ userInput, setUserInput, image, coinName }) => 
         {!image ? (
           <>
             <Skeleton variant='circular' width={50} height={50} sx={{ mr: 1 }} />
-            <Skeleton variant='text' sx={{ fontSize: '32px', width: 120 }} />
+            <Skeleton variant='text' sx={{ fontSize: '2rem', width: 120 }} />
           </>
         ) : (
           <Avatar alt='coin' src={image} sx={{ mr: 1, width: 50, height: 50 }} />
@@ -90,9 +89,9 @@ const CurrencyChartControls = ({ userInput, setUserInput, image, coinName }) => 
             onChange={handleCurrencyChange}
             displayEmpty
             inputProps={{ 'aria-label': 'Without label' }}
-            sx={{ height: '48.5px' }}
+            sx={{ height: '3.031rem' }}
           >
-            <MenuItem value={'USD'}>USD</MenuItem>
+            <MenuItem value='USD'>USD</MenuItem>
             <MenuItem value='CLP'>CLP</MenuItem>
             <MenuItem value='ARS'>ARS</MenuItem>
             <MenuItem value='EUR'>EUR</MenuItem>

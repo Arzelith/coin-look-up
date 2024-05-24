@@ -72,6 +72,3 @@ const CoinList = ({ listResponseData, title, loading }) => {
 };
 
 export default CoinList;
-
-//TODO:
-// *imagen para nada encontrado
