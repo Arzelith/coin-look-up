@@ -1,6 +1,6 @@
 import DisplayError from "../components/DisplayError";
 const NotFound = () => {
-  return <DisplayError code={404} errorMessage={'LA PÁGINA QUE BUSCA NO EXISTE'}/>;
+  return <DisplayError code={`ERROR: 404`} errorMessage={'La página que busca no existe'}/>;
 };
 
 export default NotFound;

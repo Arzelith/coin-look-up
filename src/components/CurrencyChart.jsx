@@ -109,7 +109,6 @@ const CurrencyChart = ({
 
             <Tooltip contentStyle={{ backgroundColor: '#111827' }} />
             <Area
-              // type='monotone'
               dataKey={userInput.currency}
               stroke='#04ffe6'
               fill='url(#colorUv)'

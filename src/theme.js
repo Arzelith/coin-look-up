@@ -28,14 +28,16 @@ const theme = createTheme({
       styleOverrides: {
         body: {
           backgroundColor: '#111827',
-          scrollbarColor: '#6b6b6b #2b2b2b',
+
           '&::-webkit-scrollbar, & *::-webkit-scrollbar': {
             backgroundColor: '#111827',
+            width: '10px',
           },
           '&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb': {
-            borderRadius: 5,
             backgroundColor: '#64748b',
+            borderColor: '#fff',
             minHeight: 24,
+            borderRadius: '10px',
           },
         },
       },
